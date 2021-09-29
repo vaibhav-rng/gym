@@ -1,0 +1,39 @@
+body {
+ margin: 0;
+ padding: 0;
+ height: auto;
+}
+.App{
+ color: #a3ada3;
+ text-align: center;
+ background: #222;
+ height: auto;
+}
+.footer {
+        color: #666;
+        background: #222;
+        position:absolute;
+        left:0;
+        bottom:auto;
+        right:0;
+        padding: 17px 0 18px 0;
+        border-top: 1px solid #000;
+        text-align: center;
+        width: 100%;  
+}
+.intro {
+        color: rgb(187, 38, 12);
+      }
+.Navbar{
+        background: #222;
+        
+}
+.form-control:focus {
+        border-color: #28a745;
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    } 
+
+.reviewbox{
+        width: 18rem
+} 
+  
