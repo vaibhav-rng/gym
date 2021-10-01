@@ -37,3 +37,7 @@ body {
         width: 18rem
 } 
   
+.rec.rec-arrow:disabled {
+        visibility: hidden;
+/* Remove later when changing carousal to slick view  */
+} 

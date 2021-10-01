@@ -10,12 +10,13 @@ export default function CarousalHome() {
     
     return (
         <div>
-             <Carousel>
+             <Carousel
+             >
                {ReviewData.map(item => <div key={item.id}>     
                    <Stars starRating={item.starValue}/>
-                   <h1>{item.text} </h1>
-                   <h5>- {item.name}</h5>
-                <Link className=" btn-primary" to={`/${item.id}`} >view</Link>  
+                   <h2>{item.text} </h2>
+                   <h5>- {item.name}</h5>       
+                <Link  to={`/${item.id}`} > <button className="btn-primary">view</button> </Link>  
                </div>)}
                 
                </Carousel>
