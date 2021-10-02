@@ -63,7 +63,7 @@ class QuoteForm extends Component {
    </select> 
     {anyother}
    </div>
-   <br /> <br /> 
+   <br/> <br/> 
 
   <button type="submit" onClick={this.handleClick} className="btn btn-primary">Submit</button>
   
