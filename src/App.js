@@ -23,7 +23,7 @@ export default function App() {
         <Route path="/Quoteform" component={QuoteForm}  ></Route>
         <Route path="/" component={Home} exact ></Route>
         <Route path="/review" component={Review}></Route>
-        <Route path="/about" component={About} exact ></Route>
+        <Route path="/about" component={About} ></Route>
         <Route path="/about1" component={Reviewonpage}  ></Route>
         <Route path="/Testimonials" component={ShowReview}  ></Route>
         <Route path="/:id" component={SingleReview} exact  ></Route>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 function About(props) {
-    const {name,phnumber,goal,email}=props.location.state
+    const {name,phnumber,goal,email}=props.location
     return (
         <>
             <h1>{name} form has been submit</h1>
