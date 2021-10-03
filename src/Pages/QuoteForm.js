@@ -34,21 +34,18 @@ class QuoteForm extends Component {
    }
     return (
         <div>
-            <form>
-  <div className="form-group col-4">
-    <label  for="name">Name</label>
+            <form >
+  <div className="form-group  col-4">
     <input type="text"  className="form-control " id="name" value={this.state.name}
       onChange={this.onchangeHandle}    placeholder="Enter Name"/>
      <br />
   </div>
   <div className="form-group col-4" >
-    <label for="email">Email</label>
     <input type="Email" className="form-control" id="email"  value={this.state.email}
       onChange={this.onchangeHandle}  placeholder="Enter Email"/>
   </div>
   <br />
   <div className="form-group  col-2">
-    <label for="phnumber">Phone Number</label>
     <input type="text" className="form-control " value={this.state.phnumber}  onChange={this.onchangeHandle} 
      id="phnumber" placeholder="Enter Phone Number"/>
   </div>

@@ -1,3 +1,4 @@
+
 body {
  margin: 0;
  padding: 0;
@@ -25,8 +26,7 @@ body {
         color: rgb(187, 38, 12);
       }
 .Navbar{
-        background: #222;
-        
+        background: #222;      
 }
 .form-control:focus {
         border-color: #28a745;
@@ -41,3 +41,7 @@ body {
         visibility: hidden;
 /* Remove later when changing carousal to slick view  */
 } 
+.Formbg{
+        background-image: url("./images/1078069.jpg");
+        background-size:100%;
+}
