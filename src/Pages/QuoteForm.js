@@ -56,7 +56,6 @@ const QuoteForm = (props) => {
    {anyother}
    </div>
    <br/> <br/> 
-   <h1>{state.name}</h1>
   <button type="submit" onClick={onsubmitHandle}  className="btn btn-primary">Submit</button>
    
 </form>

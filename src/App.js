@@ -11,6 +11,7 @@ import Review from './Pages/Review';
 import ShowReview from './Pages/ShowReview';
 import  Reviewonpage  from './components/Reviewonpage';
 import SingleReview from './components/SingleReview';
+import Testpage from './Pages/testpage';
 
 export default function App() {
   
@@ -24,7 +25,7 @@ export default function App() {
         <Route path="/" component={Home} exact ></Route>
         <Route path="/review" component={Review}></Route>
         <Route path="/about" component={About} ></Route>
-        <Route path="/about1" component={Reviewonpage}  ></Route>
+        <Route path="/about1" component={Testpage}  ></Route>
         <Route path="/Testimonials" component={ShowReview}  ></Route>
         <Route path="/:id" component={SingleReview} exact  ></Route>
      </Switch>
