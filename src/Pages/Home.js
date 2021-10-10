@@ -17,8 +17,8 @@ function Home() {
           <div className="formpadding" ><QuoteForm/></div>
         </div>
         <div className="bmibackground">
-        <h1 className=" position-absolute" style={{"font-size":"400%"}}  >BMI</h1>
-        <h1 className=" position-absolute "style={{padding:50,"font-size":"400%",left:"-50px",}} >Calculater </h1>
+        <h1 className=" position-relative " style={{"font-size":"400%",top:50}}  >BMI</h1>
+        <h1 className=" position-absolute "style={{"font-size":"400%",left:"0px",top: "100px"}} >Calculater </h1>
             <div className="offset-9 col-2"><Bmi/></div>
         </div> 
         <CarousalHome/>

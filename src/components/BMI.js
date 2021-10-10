@@ -1,13 +1,11 @@
-import { render } from '@testing-library/react';
 import React, { useState } from 'react';
-//this is code is weirdly written :(
-
+//weird problem with form cannot focus on first element 
 const Bmi = () => {
     const [state,setstate] =useState({
         height:null,
         weight:null,
-        age:null,
-        bmi:23
+        Age:"",
+        bmi:null
     })
     
     const handleclick=(e)=>{
@@ -36,19 +34,20 @@ const Bmi = () => {
 
      }
     return (
-        
-        <>
-        <div className="">
-        <input className="form-control" onChange={handleclick} value={state.age} id="age" placeholder="Age" />
-        <input className="form-control d-inline-flex" onChange={handleclick} value={state.height} type="number" id="height" placeholder="height(m)" />
-        <input className="form-control  d-inline-flex" onChange={handleclick} value={state.weight} type="number" id="weight" placeholder="weight(kg)" />
+        <div>
+         <form>
+        <input className="form-control" onChange={handleclick} value={state.Age} type="number" id="Age" placeholder="Age" />
+        <input className="form-control " onChange={handleclick} value={state.height} type="number" id="height" placeholder="height(m)" />
+        <input className="form-control" onChange={handleclick} value={state.weight} type="number" id="weight" placeholder="weight(kg)" />
          <button onClick={()=>setstate(prev=>({...prev,bmi:Math.round(state.weight/Math.pow(state.height, 2)*1000)/100}))} className="btn-primary ">BMI</button>  
-         {showbmi} 
-        <h1 
-        style={state.bmi<=18?{color:"blue"}:state.bmi>18&&state.bmi<24?{color:"green"}:state.bmi>24&&state.bmi<30?{color:"orange"}:{color:"red"}}>
-        {weightType}</h1>         
+         <div className=' position-absolute bmiboxstyle' style={{left:"600px",top: "60px"}}>
+          {state.bmi===null?null:<h1>{`BMI:${showbmi}`}</h1> }
+         <h1 
+          style={state.bmi<=18?{color:"blue"}:state.bmi>18&&state.bmi<24?{color:"green"}:state.bmi>24&&state.bmi<30?{color:"orange"}:{color:"red"}}>
+           {weightType}</h1>
+         </div>
+         </form>   
         </div>
-        </>
     );
 }
 
