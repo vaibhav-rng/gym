@@ -4,9 +4,8 @@ function About(props) {
     const {name,phnumber,email}=props.location.state
     return (
         <>
-            <h1>{name} form has been submit</h1>
-            <h1>{phnumber} form has been submit</h1>
-            <h1>{email} form has been submit</h1>
+            <h1> Thank you , {name} for your response </h1>
+            <h1> We will contact you on this {phnumber} or {email} </h1>
         </>
     )
 }

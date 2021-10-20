@@ -1,17 +1,29 @@
-import React, { Component } from 'react';
+import React ,{useState , useEffect}from 'react';
+import axios from 'axios';
 import Reviewonpage from '../components/Reviewonpage';
-import ReviewData from '../Pages/Reviewdata';
 
-class ShowReview extends Component {
-    render() {
-        const mappedReview = ReviewData.map(data=> <Reviewonpage name={data.name}
-         text={data.text} starvalue={data.starValue} key={data.id}  /> )
-        return (
-            <>
-                {mappedReview}
-            </>
-        );
+export  function ShowReview() {
+
+    const [ReviewData,setReviewData]=useState([])
+
+    useEffect(()=>{
+        axios.get("http://localhost:3001/showreview")
+        .then((response)=>{
+            setReviewData(response.data)
+        })
+        .catch((err)=>{
+        console.log(err)
+        })
     }
-}
+    )
+    const mappedReview = ReviewData.map(data=> <Reviewonpage name={data.username}
+        text={data.reviewarea} starvalue={data.rating} key={data._id}  /> )
+       return (
+           <>
+               {mappedReview}
+           </>
+       );
+    
+       }
 
 export default ShowReview;
