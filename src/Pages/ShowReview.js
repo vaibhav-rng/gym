@@ -7,7 +7,7 @@ export  function ShowReview() {
     const [ReviewData,setReviewData]=useState([])
 
     useEffect(()=>{
-        axios.get("http://localhost:3001/showreview")
+        axios.get("http://localhost:3001/review")
         .then((response)=>{
             setReviewData(response.data)
         })
